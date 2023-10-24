@@ -5,14 +5,13 @@ import { NextAppDirEmotionCacheProvider } from "@/theme/EmotionCache";
 import { Montserrat } from "./fonts";
 
 const themeOptions: ThemeOptions = {
-    direction: 'rtl',
+    direction: 'ltr',
     palette: {
         mode: 'light',
         primary: {
-            main: '#007aff',
-            dark: '#0661dc',
-            light: '#00a8ff',
-            "100": 'linear-gradient(-45deg, rgba(6,97,220,1) 0%, rgba(0,168,255,1) 100%)'
+            main: '#84DCC6',
+            dark: '#0CB09D',
+            light: '#51B89E',
         },
     },
     typography: {
@@ -22,14 +21,7 @@ const themeOptions: ThemeOptions = {
         MuiButton: {
             styleOverrides: {
                 root: {
-                    '& .MuiButton-endIcon': {
-                        marginLeft: '-4px !important', 
-                        marginRight: '8px !important',
-                    },
-                    '& .MuiButton-startIcon': {
-                        marginLeft: '8px !important', 
-                        marginRight:'-4px !important',
-                    },
+                    
                 }
             }
         }

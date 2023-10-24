@@ -8,4 +8,4 @@ export function getCookie(ctx: any) {
 export function getAccessToken(ctx: any) {
     let getCookies = getCookie(ctx);
     return getCookies[cookieNames.accessToken];
-}
+};
