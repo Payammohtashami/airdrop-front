@@ -1,0 +1,208 @@
+@import @/styles/helpers
+
+
+.container
+    position: relative
+    margin-top: -20px
+    margin-bottom: 72px
+    width: 100%
+
+.titleWrapper
+    @include center-all
+    gap: 35px
+    margin-bottom: 45px
+    +m
+        flex-direction: column-reverse
+
+.title
+    font-size: 48px !important
+    line-height: 44px
+    font-weight: 600 !important
+    color: $d1
+    padding-right: 40px
+    +x 
+        font-size: 38px !important
+        line-height: 40px
+    +t
+        font-size: 32px !important
+        line-height: 34px
+    span
+        font-weight: 800 !important
+        color: $violet
+        display: block
+        margin-top: 10px
+
+
+.socialMediaContainer
+    display: flex
+    margin-top: 50px
+    gap: 10px
+
+.socialMedia
+    transition: all 0.2s ease-in
+    height: 53px
+    max-height: 53px
+    cursor: pointer
+    background: $white
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+    border-radius: 12px
+    display: flex
+    align-items: center
+    padding-left: 15px
+    width: 53px
+    overflow: hidden
+    &:hover
+        &:nth-child(1)
+            width: 168px
+        &:nth-child(2)
+            width: 153px
+        &:nth-child(3)
+            width: 156px
+        &:nth-child(4)
+            width: 150px
+        span
+            display: inline
+    span
+        position: absolute
+        transition: all 0.3s ease-in-out
+        display: none
+        margin-left: 32px
+        margin-top: 4px 
+        font-size: 14px !important
+        font-family: 'DM Sans', sans-serif !important
+        font-weight: 600 !important
+        font-size: 13px !important
+        animation: opacity 0.4s linear
+
+.bannerWrapper
+    img
+        width: 553px
+        +x  
+            width: 400px
+        +t
+            width: 350px
+        +s
+            width: 300px
+
+.cardContainer
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 20px
+    +m
+        grid-template-columns: 1fr  1fr
+    +s
+        grid-template-columns: 1fr
+
+.card
+    background: $white
+    text-align: center
+    padding: 61px 0
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.06)
+    border-radius: 20px
+    +t
+        padding: 30px 0
+    h3
+        font-size: 60px !important
+        font-weight: 800 !important
+        line-height: 52px !important
+        +t
+            font-size: 34px !important
+    p
+        font-size: 24px !important
+        font-weight: 400 !important
+        +t
+            font-size: 17px !important
+
+    &:nth-child(1)
+        h3
+            color: $primary
+        span
+            color: $primary
+        small
+            background: $primary
+    &:nth-child(2)
+        h3
+            color: $orange
+        span
+            color: $orange
+        small
+            background: $orange
+        .cardLine
+            justify-content: center
+    &:nth-child(3)
+        h3
+            color: $violet
+        span
+            color: $violet
+        small
+            background: $violet
+        .cardLine
+            justify-content: flex-end
+.cardLine
+    display: flex
+    align-items: center
+    width: 80%
+    margin: 0 auto
+    height: 1px
+    margin: 30px auto 15px
+    background: rgba( $d1, 0.2)
+    small
+        height: 5px
+        width: 33%
+        border-radius: 10px
+
+
+.discord
+    position: absolute
+    width: 140px !important
+    top: 300px
+    right: 50px
+    +x
+        width: 100px !important
+        top: 230px
+    +t
+        width: 80px !important
+
+    +s
+        top: 190px
+        right: 30px
+.youtube
+    position: absolute
+    width: 120px !important
+    top: 140px
+    right: 130px
+    +x
+        width: 90px !important
+        top: 90px
+        right: 100px
+    +t
+        width: 80px !important
+    +s
+        top: 70px
+        width: 65px !important
+        right: 80px
+.twitter
+    position: absolute
+    width: 50px !important
+    top: 90px
+    right: 250px
+    +x
+        right: 220px
+        top: 70px
+        width: 40px !important
+    +t
+        width: 35px !important
+        right: 200px
+    +s
+        right: 150px
+        top: 50px
+
+
+
+@keyframes opacity
+    0%
+        opacity: 0
+    50%
+        opacity: 0
+    100%
+        opacity: 1
