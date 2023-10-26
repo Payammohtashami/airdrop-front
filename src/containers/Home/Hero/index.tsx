@@ -13,17 +13,15 @@ const Hero: React.FC = () => {
                             <span>Be the first </span>
                             to hear about pre-sales and unexplored projects.
                         </h3>
-                        <div className={styles.socialMediaContainer}>
-                            {
-                                socialMedia.map((item) => (
-                                    <div key={item.id}>
-                                        <Link href={item.url} className={styles.socialMedia} target="_blank">
-                                            <Icon name={item.icon} size={24} />
-                                            <span style={{color: `${item.color}`}}>JOIN {item.name}</span>
-                                        </Link>
-                                    </div>
-                                ))
-                            }
+                        <div className='flex mt-12 gap-2.5'>
+                            {socialMedia.map((item) => (
+                                <div key={item.id}>
+                                    <Link href={item.url} className={styles.socialMedia} target="_blank">
+                                        <Icon name={item.icon} size={24} />
+                                        <span style={{color: `${item.color}`}}>JOIN {item.name}</span>
+                                    </Link>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className='col-span-2 lg:col-span-1' data-aos="fade-up">
@@ -37,24 +35,6 @@ const Hero: React.FC = () => {
                         </div>
                     </div> 
                 </div>
-
-                {/* <div className={styles.cardContainer}>
-                    <div className={styles.card}>
-                        <h3>{dataCard[0].Suffix}<AnimatedNumber value={dataCard[0].count} formatValue={(n) => n.toFixed(1)} duration={3000} />{dataCard[0].Prefix}</h3>
-                        <div className={styles.cardLine}><small className={styles.colorLine}></small></div>
-                        <p>{dataCard[0].detail}</p>
-                    </div>
-                    <div className={styles.card}>
-                        <h3>{dataCard[1].Suffix}<AnimatedNumber value={dataCard[1].count} formatValue={(n) => n.toFixed(1)} duration={3000} />{dataCard[1].Prefix}</h3>
-                        <div className={styles.cardLine}><small className={styles.colorLine}></small></div>
-                        <p>{dataCard[1].detail}</p>
-                    </div>
-                    <div className={styles.card}>
-                        <h3>{dataCard[2].Suffix}<AnimatedNumber value={dataCard[2].count} formatValue={(n) => n.toFixed(1)} duration={3000} />{dataCard[2].Prefix}</h3>
-                        <div className={styles.cardLine}><small className={styles.colorLine}></small></div>
-                        <p>{dataCard[2].detail}</p>
-                    </div>
-                </div> */}
             </div>
         </div>
     );
@@ -66,30 +46,29 @@ const socialMedia = [
         name: "TELEGRAM",
         color: "#2F9FDB",
         icon: "telegram-5",
-        url: "https://t.me/Airdropp_io"
+        url: "#"
     },
     {
         id: 2,
         name: "DISCORD",
         color: "#5865F2",
         icon: "discord-5",
-        url: "https://discord.gg/hKMFJCyJuT"
+        url: "#"
     },
     {
         id: 3,
         name: "YOUTUBE",
         color: "#FF0000",
         icon: "youtube-5",
-        url: "https://youtube.com/c/Airdropp_io"
+        url: "#"
     },
     {
         id: 4,
         name: "TWITTER",
         color: "#1DA1F2",
         icon: "twitter-5",
-        url: "https://mobile.twitter.com/Airdropp_io"
+        url: "#"
     },
-    
-]
+];
 
 export default Hero;

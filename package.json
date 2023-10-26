@@ -25,6 +25,7 @@
     "node-sass": "^9.0.0",
     "nookies": "^2.5.2",
     "react": "^18",
+    "react-countup": "^6.4.2",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
     "react-outside-click-handler": "^1.3.0",

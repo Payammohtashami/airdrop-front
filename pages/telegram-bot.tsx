@@ -8,7 +8,7 @@ const HomePage = () => {
         <>
             <NextSeo 
                 title='Airdrop | Telegram Bots'
-                description='Find new crypto airdrops before other'
+                description='Be the first to hear about pre-sales and unexplored projects.'
             />
             <Home />
         </>

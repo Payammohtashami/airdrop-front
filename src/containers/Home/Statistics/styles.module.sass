@@ -1,0 +1,68 @@
+@import @/styles/helpers
+
+.cardContainer
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 20px
+    +m
+        grid-template-columns: 1fr  1fr
+    +s
+        grid-template-columns: 1fr
+
+.card
+    background: $white
+    text-align: center
+    padding: 61px 0
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.06)
+    border-radius: 20px
+    +t
+        padding: 30px 0
+    h3
+        font-size: 60px !important
+        font-weight: 800 !important
+        line-height: 52px !important
+        +t
+            font-size: 34px !important
+    p
+        font-size: 24px !important
+        font-weight: 400 !important
+        +t
+            font-size: 17px !important
+
+    &:nth-child(1)
+        h3
+            color: $primary
+        span
+            color: $primary
+        small
+            background: $primary
+    &:nth-child(2)
+        h3
+            color: $orange
+        span
+            color: $orange
+        small
+            background: $orange
+        .cardLine
+            justify-content: center
+    &:nth-child(3)
+        h3
+            color: $violet
+        span
+            color: $violet
+        small
+            background: $violet
+        .cardLine
+            justify-content: flex-end
+.cardLine
+    display: flex
+    align-items: center
+    width: 80%
+    margin: 0 auto
+    height: 1px
+    margin: 30px auto 15px
+    background: rgba( $d1, 0.2)
+    small
+        height: 5px
+        width: 33%
+        border-radius: 10px
