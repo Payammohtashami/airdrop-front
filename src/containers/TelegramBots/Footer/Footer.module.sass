@@ -1,0 +1,94 @@
+@import @/styles/helpers
+
+.wrapper
+    margin-top: 220px
+    margin-bottom: 120px
+    background: $lightBlue
+    box-sizing: border-box
+    max-height: 250px
+    height: 250px
+    +x
+        height: 200px
+    +t
+        margin-top: 150px
+        max-height: 9999px
+        height: auto
+
+.container
+    max-height: 200px
+    display: flex
+    align-items: flex-start
+    +t
+        justify-content: flex-start
+        flex-direction: column
+        max-height: 9999px
+        align-items: center
+
+.photoWrapper
+    margin-top: -160px
+    +x
+        margin-top: -100px
+    +t
+        margin-bottom: 0px
+        margin-top: -80px
+    img
+        width: 438px
+        +w
+            width: 400px
+        +x
+            width: 310px
+        +m
+            width: 250px
+.btnWrapper
+    +t
+        margin-top: 60px
+    >a
+        position: static
+        color: $white
+        font-weight: 800
+        font-size: 23px
+        padding: 13px 40px
+        background: linear-gradient(175.11deg, #5ABBFB 4.88%, #2572D3 110.19%)
+        box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.13), inset 0px 4px 4px rgba(255, 255, 255, 0.25)
+        border-radius: 12px
+        +x
+            font-size: 20px
+            padding: 13px 30px
+    svg
+        position: absolute
+        width: 60px
+        margin-left: -65px
+        margin-top: 15px
+        +x
+            width: 55px
+            margin-top: 10px
+            margin-left: -60px
+
+
+.detailWrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-left: 65px
+    margin-top: 61px
+    +w
+        margin-left: 63px
+    +x
+        margin-left: 40px
+    +t
+        margin: 60px 0 80px
+        flex-direction: column
+    span
+        display: block
+        font-size: 40px
+        font-weight: 800
+        &:nth-child(1)
+            color: $darkBlue
+        &:nth-child(2)
+            color: $white
+        +w
+            font-size: 34px
+        +x
+            font-size: 30px
+            

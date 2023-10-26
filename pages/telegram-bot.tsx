@@ -1,21 +1,21 @@
 import React from 'react';
-import Home from '@/containers/Home';
+import TelegramBots from '@/containers/TelegramBots';
 import { NextSeo } from 'next-seo';
 
 
-const HomePage = () => {
+const TelegramBotsPage = () => {
     return (
         <>
             <NextSeo 
                 title='Airdrop | Telegram Bots'
                 description='Be the first to hear about pre-sales and unexplored projects.'
             />
-            <Home />
+            <TelegramBots />
         </>
     )
 };
 
-export default HomePage;
+export default TelegramBotsPage;
 
 export async function getStaticProps() {
     return {

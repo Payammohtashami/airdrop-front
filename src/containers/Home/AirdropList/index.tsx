@@ -18,7 +18,7 @@ const AirdropList = () => {
                     </div>
                 ))}
             </div>
-            <Link href="/airdrop" className="flex items-center justify-center">
+            <Link href="/airdrop" className="flex items-center justify-center mt-12">
                 <Button sx={{border: '1px solid', borderRadius: 2.4, px: 2, fontSize: 16}}>
                     Show More
                 </Button>
