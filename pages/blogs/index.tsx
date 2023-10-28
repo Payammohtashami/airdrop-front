@@ -1,21 +1,21 @@
 import React from 'react';
-import TelegramBots from '@/containers/TelegramBots';
+import BlogsList from '@/containers/Blogs/BlogsList';
 import { NextSeo } from 'next-seo';
 
 
-const TelegramBotsPage: React.FC = () => {
+const BlogsPage: React.FC = () => {
     return (
         <>
             <NextSeo 
-                title='Airdrop | Telegram Bots'
+                title='Airdrop | Blogs page'
                 description='Be the first to hear about pre-sales and unexplored projects.'
             />
-            <TelegramBots />
+            <BlogsList />
         </>
     )
 };
 
-export default TelegramBotsPage;
+export default BlogsPage;
 
 export async function getStaticProps() {
     return {

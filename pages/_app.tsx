@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast';
 import { Provider } from 'react-redux';
 import { AppProps } from 'next/app';
 import '@/styles/index.css';
+import 'swiper/css';
 
 export default function App({ Component, pageProps }: AppProps) {
     setupAxios(store, axios);

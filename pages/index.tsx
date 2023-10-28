@@ -3,7 +3,7 @@ import Home from '@/containers/Home';
 import { NextSeo } from 'next-seo';
 
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
     return (
         <>
             <NextSeo 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import Icon from "@/components/Icon";
 import Link from "next/link";
+import routes from "@/constant/routes";
 import Product from "./Product";
 import OutsideClickHandler from "react-outside-click-handler";
 import { Button, Drawer, IconButton } from "@mui/material";
@@ -32,10 +33,6 @@ const Header = () => {
         setShowProduct(!showProduct);
     };
     
-    const handleShowMenu = () => {
-        if (showMobileMenu) setShowMobileMenu(false)
-        else setShowMobileMenu(true);
-    };
     useEffect(() => {
         setShowProduct(false);
         if(showMobileMenu) setShowMobileMenu(false)
@@ -44,12 +41,13 @@ const Header = () => {
     useEffect(() => {
         Aos.init({duration: 500});
     }, [showProduct]);
+
     return (
         <header className='container px-4 mx-auto xl:max-w-screen-xl top-0 py-2 md:py-2 md:px-0'>
             <div className='relative h-full'>
                 <div className='md:flex justify-between items-center relative mt-3 hidden '>
                     <div className='flex items-center'>
-                        <Link href="/">
+                        <Link href={routes.base}>
                             <img className='w-28' src="/images/logo.svg" alt="logo" />
                         </Link>
                         <div className='h-12 w-[1px] mx-6 bg-slate-100'></div>
@@ -72,14 +70,14 @@ const Header = () => {
                                 </OutsideClickHandler>
                             </li>
                             <li className="h-5 flex items-center">
-                                <Link href="/telegram-bot" className="font-semibold text-sm text-slate-800">Telegram Bot</Link>
+                                <Link href={routes.telegramBot} className="font-semibold text-sm text-slate-800">Telegram Bot</Link>
                             </li>
                             <li className="h-5 flex items-center">
-                                <Link href="/news" className="font-semibold text-sm text-slate-800">News & Blog</Link>
+                                <Link href={routes.Journal.base} className="font-semibold text-sm text-slate-800">News & Blog</Link>
                             </li>
                         </ul>
                     </div>
-                    <Link href="/contact">
+                    <Link href={routes.contact}>
                         <Button className='!rounded-lg !bg-primary-400 !text-white !px-4 hover:!bg-primary-600'>
                             Contact Us
                         </Button>
@@ -88,7 +86,7 @@ const Header = () => {
 
                 <div className="md:hidden">
                     <div className='flex justify-between items-center pt-4'>
-                        <Link href="/" >
+                        <Link href={routes.base} >
                             <img className="w-20" src="/images/logo.svg" alt="logo" />
                         </Link>
                         <IconButton>
@@ -125,7 +123,7 @@ const Header = () => {
                                 <p className='text-primary-400 font-black text-3xl'>LATEST NEWS</p>
                                 <ul>
                                     <li className="rounded-lg transition-all duration-200 hover:bg-slate-100/70 p-4">
-                                        <Link href="/news" className="flex gap-2">
+                                        <Link href={routes.Journal.base} className="flex gap-2">
                                             <NewsIcon />
                                             <div className='-mt-1'>
                                                 <p className='text-slate-900 font-bold'>Latest News</p>
