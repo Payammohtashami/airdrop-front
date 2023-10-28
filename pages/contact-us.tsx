@@ -1,21 +1,21 @@
 import React from 'react';
-import Home from '@/containers/Home';
+import Contact from '@/containers/Contact';
 import { NextSeo } from 'next-seo';
 
 
-const HomePage: React.FC = () => {
+const ContactUsPage: React.FC = () => {
     return (
         <>
             <NextSeo 
-                title='Airdrop | Main Page'
+                title='Airdrop | contact us'
                 description='Be the first to hear about pre-sales and unexplored projects.'
             />
-            <Home />
+            <Contact />
         </>
     )
 };
 
-export default HomePage;
+export default ContactUsPage;
 
 export async function getStaticProps() {
     return {

@@ -1,0 +1,209 @@
+@import @/styles/helpers
+
+.titleWrapper
+    text-align: center
+    margin-top: 30px
+    h2
+        color: $primary
+        font-size: 40px !important
+        font-weight: 600 !important
+        margin-bottom: 35px
+    p
+        margin: 0 24%
+        line-height: 21px
+        font-size: 16px !important
+        +t
+            margin: 0 10%
+
+.mainSection
+    display: grid
+    gap: 25px
+    grid-template-columns: 1fr 1fr
+    margin: 41px 0 
+    +d
+        grid-template-columns: 49% 49%
+        gap: 15px
+        padding: 0 1%
+        justify-content: center
+        align-content: center
+    +m
+        grid-template-columns: 1fr
+
+.emailWrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    +d
+        display: flex
+        justify-content: flex-end
+    +m
+        justify-content: center
+    div
+        &:nth-child(2)
+            display: flex
+            justify-content: center
+            flex-direction: column
+            background: $white
+            min-width: 400px
+            min-height: 400px
+            width: 499px
+            height: 449px
+            padding: 78px 38px
+            box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15)
+            border-radius: 18px
+            +t
+                width: 100%
+                min-width: 350px
+                padding: 40px 20px
+                height: 380px
+                min-height: 380px
+            +m
+                width: 100%
+                margin: 0 20px
+                max-width: 500px
+            +s
+                min-height: 380px
+                height: 380px
+                min-width: 343px
+            h4
+                font-size: 40px !important
+                margin-bottom: 28px
+                font-weight: 600 !important
+            p
+                font-size: 16px !important
+                line-height: 21px
+                margin-bottom: 25px
+                +s
+                    font-size: 14px !important
+            
+.emailBtn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    transform: translateX(-8px)
+    h2
+        font-weight: 600 !important
+        padding: 15px 50px 15px 25px
+        font-size: 16px !important
+        background: $text
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        border-radius: 8px 
+        margin: 0 auto
+        color: $white
+        +s
+            padding: 15px 30px 15px 20px
+            font-size: 14px !important
+    svg
+        @include center-all
+        background: $white
+        border-radius: 50%
+        border: 7px solid $white
+        position: absolute
+        margin-right: -250px
+        height: 50px
+        width: 50px
+        +s
+            width: 45px
+            height: 45px
+            margin-right: -210px
+
+
+.grayBlock
+    background: $text
+    height: 77%
+    +d
+        display: none
+
+.telegramWrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    +d
+        display: flex
+    +m
+        justify-content: center
+    div
+        &:nth-child(1)    
+            min-width: 400px        
+            display: flex
+            justify-content: center
+            flex-direction: column
+            background: $white
+            padding: 40px 30px
+            min-height: 400px
+            width: 499px
+            height: 449px
+            padding: 78px 38px
+            box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.15)
+            border-radius: 18px
+            +t
+                width: 100%
+                min-width: 350px
+                padding: 40px 20px
+                height: 380px
+                min-height: 380px
+            +m
+                width: 100%
+                max-width: 500px
+                margin: 0 20px
+            +s
+                height: 380px
+                min-height: 380px
+                padding: 50px 26px
+                min-width: 343px
+            h4
+                font-size: 40px !important
+                margin-bottom: 28px
+                font-weight: 600 !important
+                color: $blue
+            p
+                font-size: 16px !important
+                line-height: 21px
+                margin-bottom: 25px
+                +s
+                    font-size: 14px !important
+
+            
+.telegramBtn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    transform: translateX(-8px)
+    h2
+        font-weight: 600 !important
+        padding: 15px 45px 15px 25px
+        background: $blue
+        font-size: 16px !important
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 8px 
+        margin: 0 auto
+        color: $white
+        +s
+            padding: 15px 30px 15px 20px
+            font-size: 14px !important
+
+    svg
+        background: $white
+        border-radius: 50%
+        border: 7px solid $white
+        position: absolute
+        margin-left: 270px
+        height: 50px
+        width: 50px
+        +s
+            width: 45px
+            height: 45px
+            margin-left: 240px
+
+
+.blueBlock
+    background: $blue
+    height: 77%
+    +d
+        display: none

@@ -7,7 +7,7 @@ const BlogsPage: React.FC = () => {
     return (
         <>
             <NextSeo 
-                title='Airdrop | Blogs page'
+                title='Airdrop | Blogs'
                 description='Be the first to hear about pre-sales and unexplored projects.'
             />
             <BlogsList />

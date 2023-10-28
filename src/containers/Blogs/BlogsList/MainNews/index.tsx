@@ -20,7 +20,7 @@ const MainNews: React.FC = () => {
                             <p className='mt-1.5'>{lastBlogs.description}</p>
                         </div>
 
-                        <div className='flex justify-between items-center mt-4'>
+                        <div className='flex justify-between flex-col md:flex-row gap-4 items-center mt-4'>
                             <div className='flex gap-3'>
                                 <div style={{boxShadow: '0px 0px 6px rgba(0, 0, 0, 0.08)'}} className='flex gap-2 justify-center items-center bg-white rounded-xl px-2.5 py-1.5'>
                                     <View size={20} className='fill-sky-500' />
@@ -47,7 +47,7 @@ const MainNews: React.FC = () => {
                 </div>
                 <div className='col-span-5 md:col-span-2'>
                     <h2 className='text-primary-400 mb-3 text-xl font-bold'>Recommended</h2>
-                    <div className='grid grid-cols-2 md:grid-cols-1 gap-4 '>
+                    <div className='grid grid-cols-1 md:grid-cols-1 gap-4 '>
                         {blogsList.map((item) => (
                             <BlogsCard {...item} key={item.id} />
                         ))}
