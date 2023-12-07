@@ -1,0 +1,194 @@
+@import @/styles/helpers
+
+.wrapper
+    display: grid
+    grid-template-areas: "a b""a b""a b""c b""c d""c d""c d"
+    margin-bottom: 50px
+    grid-template-columns: 3fr 2fr
+    gap: 25px
+    +d
+        grid-template-areas: "a a""a a""a b""c b""c d""c d""c d"
+    +t
+        grid-template-columns: 2fr 2fr
+    +m
+        grid-template-columns: 1fr
+        grid-template-areas: "a""b""c""d"
+
+
+.bodyWrapper
+    grid-area: a
+    background: $white
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+    border-radius: 20px
+    overflow: hidden
+    display: flex
+    justify-content: flex-end
+    img
+        width: 100%
+        height: 383px
+        object-fit: cover
+        object-position: top
+        +m
+            height: 300px
+.descriptionWrapper
+    grid-area: c
+    background: $white
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+    border-radius: 20px
+.tableWrapper
+    grid-area: b
+    background: $white
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+    border-radius: 20px
+    
+.rewardWrapper
+    grid-area: d
+    background: $white
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+    border-radius: 20px
+
+.rewardCount
+    margin-top: 6px
+// .live
+//     background: $green
+//     position: absolute
+//     border-radius: 25px
+//     padding: 3px 20px 3px 5px
+//     margin: 20px 20px 0 0
+//     span
+//         font-weight: 700
+//         color: $white
+//         svg
+//             margin-right: 5px
+
+// .upcoming
+//     background: $yellow
+//     position: absolute
+//     border-radius: 25px
+//     padding: 8px 20px
+//     margin: 20px 20px 0 0
+//     span
+//         font-weight: 700
+//         color: $white
+// .close
+//     background: $red
+//     position: absolute
+//     border-radius: 25px
+//     padding: 8px 20px
+//     margin: 20px 20px 0 0
+//     span
+//         font-weight: 700
+//         color: $white
+
+.badge
+    position: absolute
+    border-radius: 25px
+    padding: 8px 20px
+    margin: 20px 20px 0 0
+    min-width: 100px
+    text-align: center
+    display: flex
+    gap: 6px
+    span
+        font-weight: 700
+        color: $white
+        text-transform: uppercase
+
+.closed
+    background: #F42020
+
+.live
+    background: $green
+
+.upcoming
+    background: $yellow
+
+        
+.tableWrapper
+    padding: 18px
+    
+.table
+    width: 100%
+    tr
+        border-bottom: 1px solid $border
+        &:last-child
+            border: none
+        td
+            padding: 15px 0
+            &:nth-child(2)
+                text-align: right
+                font-weight: 600 
+
+.descriptionWrapper
+    padding: 30px 50px
+    +d
+        padding: 30px
+    +t
+        padding: 20px
+    p
+        line-height: 22px
+        padding-bottom: 15px
+        +t
+            font-size: 14px !important
+            line-height: 1.2
+    hr
+        border: none
+        background: $border
+        height: 1px
+    h4
+        color: $dark-green
+
+.rewardWrapper
+    padding: 18px
+    width: 100%
+    span
+        color: rgba($primary, 0.6)
+        font-weight: 500
+        font-size: 16px
+    h4
+        padding-top: 6px
+        font-weight: 600 !important
+        font-size: 28px !important
+        margin-bottom: 30px
+.rewardBtn
+    display: flex
+    justify-content: center
+    margin: 10px auto
+    height: 54px
+    +a
+        height: 42px
+    a
+        @include center-all
+        background: $green2
+        color: $white
+        border-radius: 10px
+        padding: 10px 0
+        width: 90%
+        font-weight: 700
+        transition: all 0.2s ease-in-out
+        svg
+            margin-left: 10px
+        &:hover
+            background: $dark-green
+
+.rewardTable
+    width: 100%
+    tr
+        border-bottom: 1px solid $border
+        &:last-child
+            border: none
+        td
+            padding: 13.5px 0
+            &:nth-child(2)
+                text-align: right
+                font-weight: 700 
+            
+
+
+.descriptionTitle
+    color: $dark-green
+    font-size: 30px !important
+    font-weight: 600 !important
+    border-bottom: 1px solid #f4f4f4
+    padding-bottom: 6px 
+    margin-bottom: 12px
