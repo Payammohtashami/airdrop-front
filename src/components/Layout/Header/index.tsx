@@ -70,7 +70,7 @@ const Header = () => {
                                 <Link href={routes.telegramBot} className="font-semibold text-sm text-slate-800">Telegram Bot</Link>
                             </li>
                             <li className="h-5 flex items-center">
-                                <Link href={routes.Journal.base} className="font-semibold text-sm text-slate-800">News & Blog</Link>
+                                <Link href={routes.blog.base} className="font-semibold text-sm text-slate-800">News & Blog</Link>
                             </li>
                         </ul>
                     </div>
@@ -120,7 +120,7 @@ const Header = () => {
                                 <p className='text-primary-400 font-black text-3xl'>LATEST NEWS</p>
                                 <ul>
                                     <li className="rounded-lg transition-all duration-200 hover:bg-slate-100/70 p-4">
-                                        <Link href={routes.Journal.base} className="flex gap-2">
+                                        <Link href={routes.blog.base} className="flex gap-2">
                                             <NewsIcon />
                                             <div className='-mt-1'>
                                                 <p className='text-slate-900 font-bold'>Latest News</p>

@@ -3,33 +3,43 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import { Button } from "@mui/material";
 import { Dashboard, Discord, Speaker, Telegram, Twitter, Youtube, GreenRocket, List, ListingPolicy, Airdrop, Close,  } from "@/components/Icon/Header";
+import routes, { RoutesType } from "@/constant/routes";
+import Image from "next/image";
 
+interface ProductionLinksPropsType {
+    id: number,
+    icon: React.ElementType,
+    title: string,
+    description: string,
+    url: string,
+    isCommingSoon: boolean,
+};
 
 const Product = () => {
-    const productList: any[] = [
+    const productList: ProductionLinksPropsType[] = [
         {
             id: 1,
             icon: List,
             title: "Airdrop List",
             description: "List of latest and live airdrops",
-            url: "/airdrop",
-            isNew: false,
+            url: routes.airdrop.base,
+            isCommingSoon: false,
         },
         {
             id: 2,
             icon: Close,
             title: "Closed Airdrop",
             description: "List of all airdrops released so far",
-            url: "/airdrop/closed",
-            isNew: false,
+            url: routes.airdrop.base,
+            isCommingSoon: false,
         },
         {
             id: 3,
             icon: ListingPolicy,
             title: "Listing Policy",
             description: "Our policy when accepting airdrop projects",
-            url: "/listing-policy",
-            isNew: false,
+            url: routes.listingPolicy,
+            isCommingSoon: false,
         },
         {
             id: 4,
@@ -37,7 +47,7 @@ const Product = () => {
             title: "Create Airdrop",
             description: "Start your own airdrop with the decentralized app",
             url: "#",
-            isNew: true,
+            isCommingSoon: true,
         },
     ];
 
@@ -50,15 +60,28 @@ const Product = () => {
                     <h3 className="font-black text-primary-400">AIRDROP</h3>
                 </div>
                 <ul className='mt-6 flex flex-col'>
-                    {productList?.map((item,index) => (
-                        <li key={index} className="rounded-lg transition-all duration-200 hover:bg-slate-100/70 p-4">
-                            <Link href={item.url} className="flex gap-2 ">
-                                <item.icon />
-                                <div className="-mt-1">
-                                    <p className='text-slate-900 font-bold'>{item.title}</p>
-                                    <p className='text-xs text-slate-500 mt-1'>{item.description}</p>
-                                </div>
-                            </Link>
+                    {productList?.map((item, index) => (
+                        <li key={index} className="rounded-lg relative transition-all duration-200 hover:bg-slate-100/70 p-4">
+                            {item?.isCommingSoon ? 
+                                <>
+                                    <div className="absolute text-xs right-4 text-white bg-sky-600 rounded-3xl px-2 py-1 font-bold">New</div>
+                                    <div className="flex gap-2 ">
+                                        <item.icon />
+                                        <div className="-mt-1">
+                                            <p className='text-slate-900 font-bold'>{item.title}</p>
+                                            <p className='text-xs text-slate-500 mt-1'>{item.description}</p>
+                                        </div>
+                                    </div>
+                                </>
+                                :
+                                <Link href={item.url} className="flex gap-2 ">
+                                    <item.icon />
+                                    <div className="-mt-1">
+                                        <p className='text-slate-900 font-bold'>{item.title}</p>
+                                        <p className='text-xs text-slate-500 mt-1'>{item.description}</p>
+                                    </div>
+                                </Link>
+                            }
                         </li>
                     ))}
                 </ul>
@@ -104,11 +127,13 @@ const Product = () => {
             <div className='p-l-6 col-span-3'>
                 <div className="px-4 max-h-96 flex flex-col gap-2 overflow-y-auto">
                     <p className="font-medium text-slate-800">Latest News</p>
-                    <img src={'/images/airdrop-1.jpg'} className="rounded-xl" alt="news" />
+                    <Image src='/images/airdrop-1.jpg' width={0} height={0} sizes="100vw" className="w-full rounded-xl" alt="news" />
                     <div className="mt-2 flex flex-col gap-2">
                         <span className="text-primary-400 font-semibold">AICPrime</span>
                         <p className="text-sm">The parent community of AIRPrime, “AIRPrime Technologies” was founded in August 2017 as a Research and Development group with a particular focus on artificial intelligence technology.intelligence technology.</p>
-                        <Button className=" !text-slate-500 !rounded-xl" endIcon={<Icon name='arrow-right' size={12} />}>Read more</Button>
+                        <Link href={routes.blog.base}>
+                            <Button className=" !text-slate-500 !rounded-xl" endIcon={<Icon name='arrow-right' size={12} />}>Read more</Button>
+                        </Link>
                     </div>
                 </div>
             </div>

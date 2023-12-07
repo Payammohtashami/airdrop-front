@@ -12,7 +12,7 @@ const MainNews: React.FC = () => {
                 <div className='col-span-5 md:col-span-3 bg-white rounded-xl overflow-hidden flex flex-col justify-between p-5' style={{boxShadow: '0px 0px 7px rgba(0, 0, 0, 0.1)'}}>
                     <div>
                         <div className=''>
-                            <Link href={routes.Journal.blog + '/' + lastBlogs?.id}>
+                            <Link href={routes.blog.detail(lastBlogs?.id)}>
                                 <img src={lastBlogs.image} className='rounded-xl' />
                             </Link>
                             <h3 className='font-bold text-xl mt-4'>{lastBlogs.title}</h3>
@@ -36,7 +36,7 @@ const MainNews: React.FC = () => {
                                 </div>
                             </div>
                             <div>
-                                <Link href={routes.Journal.blog + '/' + lastBlogs?.id} className='text-primary-600 flex items-center gap-2 hover:gap-5 transition-all'>
+                                <Link href={routes.blog.detail(lastBlogs?.id)} className='text-primary-600 flex items-center gap-2 hover:gap-5 transition-all'>
                                     Read more
                                     <NextButton size={12} />
                                 </Link>

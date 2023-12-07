@@ -8,7 +8,7 @@ import { StrokeHeart, View } from '@/components/Icon/Header';
 const NewCard: React.FC<NewsSlidesTypes> = (props) => {
     return (
         <div style={{boxShadow: '0px 0px 6px rgba(0, 0, 0, 0.1)'}} className='bg-white rounded-xl overflow-hidden mb-4'>
-            <Link href={routes.Journal.news + '/' + props.id}>
+            <Link href={routes.blog.detail(props?.id)}>
                 <div className='relative'>
                     <img src={props.image} className='w-full h-56 object-cover object-top' />
                 </div>

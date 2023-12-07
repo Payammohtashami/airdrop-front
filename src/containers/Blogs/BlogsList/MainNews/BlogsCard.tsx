@@ -7,7 +7,7 @@ import routes from '@/constant/routes';
 const BlogsCard: React.FC<BlogsCardTypes> = (props) => {
     return (
         <div className='flex gap-3 '>
-            <Link href={routes.Journal.blog + '/' + props?.id} className='w-40 h-24 rounded-xl overflow-hidden'>
+            <Link href={routes.blog.detail(props?.id)} className='w-40 h-24 rounded-xl overflow-hidden'>
                 <img src={props.image} className='h-full w-full object-cover object-top' />
             </Link>
             <div className='flex flex-col justify-between'>

@@ -1,23 +1,31 @@
-interface RoutesType {
+export interface RoutesType {
     base: string,
     telegramBot: string,
     contact: string,
-    Journal: {
+    listingPolicy: string,
+    blog: {
         base: string,
-        blog: string,
-        news: string
+        detail: (id: string | number) => string,
+    },
+    airdrop: {
+        base: string,
+        detail: (id: string | number) => string,
     },
 }
 
 const routes: RoutesType = {
     base: '/',
+    listingPolicy: 'listing-policy',
     telegramBot: 'telegram-bot',
     contact: 'contact-us',
-    Journal: {
-        base: '/blogs',
-        blog: '/blog',
-        news: '/news'
+    blog: {
+        base: '/blog',
+        detail: (id: string | number) => `/blog/${id ?? ''}`
     },
+    airdrop: {
+        base: '/airdrop',
+        detail: (id: string | number) => `/airdrop/${id ?? ''}`
+    }
 };
 
 export default routes;

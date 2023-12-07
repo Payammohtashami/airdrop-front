@@ -8,7 +8,7 @@ import { Button } from '@mui/material';
 const VideoCard: React.FC<VideosSlidesTypes> = (props) => {
     return (
         <div style={{boxShadow: '0px 0px 6px rgba(0, 0, 0, 0.1)'}} className='bg-white rounded-xl overflow-hidden mb-4'>
-            <Link href={routes.Journal.news + '/' + props.id}>
+            <Link href={routes.blog.detail(props?.id)}>
                 <div className='relative'>
                     <Image src="/images/play.png"  alt="play video button" height={56} width={56} className='absolute top-1/2 left-1/2 translate-x-1/2 translate-y-1/2' />
                     <img src={props.image} className='w-full h-56 object-cover object-top' />

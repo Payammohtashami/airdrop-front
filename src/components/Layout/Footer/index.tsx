@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from '@/components/Icon';
 import Link from 'next/link';
 import { Button } from '@mui/material';
+import routes from '@/constant/routes';
 const Footer = () => {
     const footerData =[
         {   
@@ -10,20 +11,16 @@ const Footer = () => {
             items: [
                 {
                     address:"Airdrop list",
-                    url: "/airdrop",
+                    url: routes.airdrop.base,
                 },
                 {
                     address:"Closed Airdrop",
-                    url: "/airdrop/closed",
+                    url: routes.airdrop.base,
                 },
                 {
                     address:"Listing Policy",
-                    url: "/listing-policy",
+                    url: routes.listingPolicy,
                 },
-                {
-                    address:"Create Airdrop",
-                    url: "#",
-                },                
             ]
         },
         {
@@ -32,11 +29,11 @@ const Footer = () => {
             items: [
                 {
                     address:"Telegram Bot",
-                    url: "/telegram-bot",
+                    url: routes.telegramBot,
                 },    
                 {
                     address:"News",
-                    url: "/news",
+                    url: routes.blog.base,
                 },  
             ]
         },
@@ -44,14 +41,14 @@ const Footer = () => {
     
     const socials = [
         {
-          title: "twitter",
-          size: 24,
-          url: "#",
+            title: "twitter",
+            size: 24,
+            url: "#",
         },
         {
-          title: "telegram",
-          size: 24,
-          url: "#",
+            title: "telegram",
+            size: 24,
+            url: "#",
         },
         {
             title: "discord",
@@ -63,18 +60,7 @@ const Footer = () => {
             size: 24,
             url: "#",
         },
-      ];
-    
-      const items = [
-        {
-          title: "Privacy Policy",
-          url: "/privacy-policy",
-        },
-        {
-          title: "Terms of Service",
-          url: "/terms-of-service",
-        },
-      ];
+    ];
     return (
         <footer className='container px-4 mx-auto xl:max-w-screen-xl top-0 py-2 md:py-2 md:px-0'>
 
@@ -126,20 +112,7 @@ const Footer = () => {
             </div>
 
             <div className='py-4 mt-6 border-t '>
-                <div className='flex justify-between gap-3 flex-col md:flex-row items-center'>
-                    <p className='text-xs font-medium text-center md:text-left'>©2022 - 2023  Copyright by Airdropp™ - All rights reserved.</p>
-                    <div className='flex gap-3'>
-                        {items.map((x) => {
-                            return (
-                                <div key={x.url}>
-                                    <Link className='text-xs text-slate-800' href={x.url}>
-                                        {x.title}
-                                    </Link>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
+                <p className='text-xs font-medium text-center md:text-left'>©2022 - 2023  Copyright by Airdropp™ - All rights reserved.</p>
             </div>
 
         </footer>
